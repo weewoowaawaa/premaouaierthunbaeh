@@ -827,7 +827,8 @@ SGTSOBF_ffFFFFFFf={"\108","\111","\97","\100","\115","\116","\114","\105","\110"
 end)
 
 otherTab:Button("Dance Script", "Loads a external dance script (only works till you server hop)", function()
-    Flux:Notification("In development.", "Sorry, this feature is in development.", "Okay")
+    Flux:Notification("Script executed!", "Please click , on your keyboard to choose a animation. This script works till you server hop/change servers.", "Got it.")
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
 end)
 
 otherTab:Button("Discord Server", "Copies Discord server link", function()
@@ -909,6 +910,11 @@ otherTab:Button("Reset Settings", "Resets ALL settings to default", function()
     serverHop()
 end)
 
+local trollTab = win:Tab("Trolling", "http://www.roblox.com/asset/?id=10213989952")
+
+trollTab:Button("Infinite Yield", "This is a script made for trolling/admin commands.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
 
 settingsLock = false
 if string.find(getgenv().settings.webhookBox, "discord.com/api/webhooks/") then
